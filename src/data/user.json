@@ -1,0 +1,12 @@
+{
+	"name": "Hemligt",
+	"profession": "It's a secret...",
+	"links": [
+		{
+			"url": "https://status.hemligt.org",
+			"icon": "wifi-line",
+			"title": "Status Monitoring",
+			"description": "How are we feeling today?"
+		}
+	]
+}
