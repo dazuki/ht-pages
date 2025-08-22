@@ -1,0 +1,29 @@
+---
+import 'remixicon/fonts/remixicon.css'
+
+interface Props {
+	icon: string
+	alt: string
+	url: string
+}
+
+const { icon, alt, url } = Astro.props
+---
+
+<a href={url} class="link">
+	<i class={'ri-' + icon}></i>
+</a>
+
+<style>
+	.link {
+		font-size: 1.75rem;
+		padding: 1rem;
+		display: block;
+		text-decoration: none;
+		color: var(--zinc-400);
+	}
+
+	a.link:hover {
+		color: var(--zinc-50);
+	}
+</style>

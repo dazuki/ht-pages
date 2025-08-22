@@ -1,6 +1,9 @@
 ---
-import UserProfileImage from '../assets/hemligt_logo.png'
+import Social from './Social.astro'
+import UserProfileImage from '../assets/profilbild.jpg'
 import dataList from '../data/user.json'
+
+const items = dataList.socials
 ---
 
 <header class="profile">
@@ -12,6 +15,13 @@ import dataList from '../data/user.json'
 	<div class="profile-data">
 		<h1 class="profile-name">{dataList.name}</h1>
 		<p class="profile-profession">{dataList.profession}</p>
+	</div>
+	<div class="profile-links">
+		{
+			items.map(item => {
+				return <Social icon={item.icon} url={item.url} alt={item.alt} />
+			})
+		}
 	</div>
 </header>
 
@@ -57,5 +67,11 @@ import dataList from '../data/user.json'
 	.profile-profession {
 		font-size: 0.875rem;
 		color: var(--zinc-400);
+	}
+
+	.profile-links {
+		margin-top: 1.5rem;
+		display: flex;
+		justify-items: center;
 	}
 </style>

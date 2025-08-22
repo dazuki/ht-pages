@@ -1,6 +1,23 @@
 {
 	"name": "Lars Lindberg",
 	"profession": "Web Designer / Linux Enthusiast",
+	"socials": [
+		{
+			"url": "https://github.com/dazuki",
+			"icon": "github-line",
+			"alt": "Github"
+		},
+		{
+			"url": "https://x.com/dessan_89",
+			"icon": "twitter-x-line",
+			"alt": "X / Twitter"
+		},
+		{
+			"url": "https://bsky.app/profile/dazuki.bsky.social",
+			"icon": "bluesky-line",
+			"alt": "Bluesky"
+		}
+	],
 	"links": [
 		{
 			"url": "https://status.hemligt.org",
