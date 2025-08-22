@@ -1,12 +1,12 @@
 {
-	"name": "Hemligt",
-	"profession": "It's a secret...",
+	"name": "Lars Lindberg",
+	"profession": "Web Designer / Linux Enthusiast",
 	"links": [
 		{
 			"url": "https://status.hemligt.org",
 			"icon": "wifi-line",
-			"title": "Status Monitoring",
-			"description": "How are we feeling today?"
+			"title": "Uptime Kuma",
+			"description": "Status Monitoring"
 		}
 	]
 }
