@@ -4,7 +4,7 @@
 	"links": [
 		{
 			"url": "https://status.hemligt.org",
-			"icon": "wifi-line",
+			"icon": "rfid-line",
 			"title": "Uptime Kuma",
 			"description": "Status Monitoring"
 		}
