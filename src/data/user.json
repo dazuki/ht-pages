@@ -24,6 +24,12 @@
 			"icon": "rfid-line",
 			"title": "Services",
 			"description": "Status Monitoring"
+		},
+		{
+			"url": "https://qr.hemligt.org",
+			"icon": "qr-code-line",
+			"title": "QR-codes",
+			"description": "Make QR-codes"
 		}
 	]
 }
