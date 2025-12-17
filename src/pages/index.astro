@@ -15,12 +15,31 @@ import List from '../components/List.astro'
 	.container {
 		position: relative;
 		margin: auto;
-		padding: 0.3125rem;
-		max-width: 600px;
+		padding: 1rem;
+		max-width: 640px;
 		width: 90%;
-		height: 100vh;
-		overflow: hidden;
-		scrollbar-width: 8px;
-		scrollbar-color: var(--zinc-900) var(--zinc-950);
+		min-height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		z-index: 1;
+		scrollbar-width: thin;
+		scrollbar-color: var(--gray-800) transparent;
+	}
+
+	.container::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	.container::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	.container::-webkit-scrollbar-thumb {
+		background: var(--gray-800);
+		border-radius: 3px;
+	}
+
+	.container::-webkit-scrollbar-thumb:hover {
+		background: var(--gray-600);
 	}
 </style>

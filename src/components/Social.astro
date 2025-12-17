@@ -10,20 +10,39 @@ interface Props {
 const { icon, alt, url } = Astro.props
 ---
 
-<a href={url} class="link">
+<a href={url} class="link" aria-label={alt}>
 	<i class={'ri-' + icon}></i>
 </a>
 
 <style>
 	.link {
-		font-size: 1.75rem;
-		padding: 1rem;
-		display: block;
+		width: 2.75rem;
+		height: 2.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		text-decoration: none;
-		color: var(--zinc-400);
+		color: var(--gray-400);
+		border: 1px solid var(--gray-800);
+		border-radius: 50%;
+		font-size: 1.25rem;
+		transition:
+			color var(--transition-base),
+			border-color var(--transition-base),
+			background-color var(--transition-base),
+			transform var(--transition-base);
+		position: relative;
 	}
 
-	a.link:hover {
-		color: var(--zinc-50);
+	.link:hover {
+		color: var(--white);
+		border-color: var(--white);
+		background-color: rgba(255, 255, 255, 0.05);
+		transform: translateY(-2px);
+	}
+
+	.link i {
+		display: block;
+		line-height: 1;
 	}
 </style>
