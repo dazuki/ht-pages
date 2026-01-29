@@ -1,19 +1,27 @@
 ---
 import Link from './Link.astro'
-import * as dataList from '../data/user.json'
 
-const items = dataList.links
+interface LinkItem {
+	icon: string
+	title: string
+	description: string
+	url: string
+}
+
+interface Props {
+	links: LinkItem[]
+}
+
+const { links } = Astro.props
 ---
 
 <div class="list" id="list">
 	{
-		items.map((item, index) => {
-			return (
-				<div class="list-item" style={`animation-delay: ${300 + index * 100}ms`}>
-					<Link icon={item.icon} title={item.title} description={item.description} url={item.url} />
-				</div>
-			)
-		})
+		links.map((item, index) => (
+			<div class="list-item" style={`animation-delay: ${300 + index * 100}ms`}>
+				<Link icon={item.icon} title={item.title} description={item.description} url={item.url} />
+			</div>
+		))
 	}
 </div>
 

@@ -2,9 +2,20 @@
 import { Image } from 'astro:assets'
 import Social from './Social.astro'
 import UserProfileImage from '../assets/profilbild.jpg'
-import * as dataList from '../data/user.json'
 
-const items = dataList.socials
+interface Social {
+	icon: string
+	url: string
+	alt: string
+}
+
+interface Props {
+	name: string
+	profession: string
+	socials: Social[]
+}
+
+const { name, profession, socials } = Astro.props
 ---
 
 <header class="profile">
@@ -14,15 +25,11 @@ const items = dataList.socials
 		</figure>
 	</div>
 	<div class="profile-data">
-		<h1 class="profile-name">{dataList.name}</h1>
-		<p class="profile-profession">{dataList.profession}</p>
+		<h1 class="profile-name">{name}</h1>
+		<p class="profile-profession">{profession}</p>
 	</div>
 	<div class="profile-links">
-		{
-			items.map(item => {
-				return <Social icon={item.icon} url={item.url} alt={item.alt} />
-			})
-		}
+		{socials.map((item) => <Social icon={item.icon} url={item.url} alt={item.alt} />)}
 	</div>
 </header>
 
@@ -83,13 +90,11 @@ const items = dataList.socials
 	}
 
 	.profile-profession {
-		font-size: 0.9375rem;
+		font-size: 0.75rem;
 		font-weight: 400;
-		letter-spacing: 0.01em;
+		letter-spacing: 0.1em;
 		color: var(--gray-400);
 		text-transform: uppercase;
-		font-size: 0.75rem;
-		letter-spacing: 0.1em;
 	}
 
 	.profile-links {

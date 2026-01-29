@@ -1,13 +1,17 @@
 ---
+import { getEntry } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
 import Profile from '../components/Profile.astro'
 import List from '../components/List.astro'
+
+const user = await getEntry('user', 'profile')
+const { name, profession, socials, links } = user.data
 ---
 
-<Layout title="Hemligt">
+<Layout title="Hemligt" description={`${name} - ${profession}`}>
 	<main class="container" id="container" style="overflow: hidden;">
-		<Profile />
-		<List />
+		<Profile name={name} profession={profession} socials={socials} />
+		<List links={links} />
 	</main>
 </Layout>
 
