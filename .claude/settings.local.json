@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__astro-docs__search_astro_docs",
+      "Bash(npm run astro:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
