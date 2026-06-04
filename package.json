@@ -10,7 +10,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^6.4.3",
+		"astro": "^6.4.4",
 		"remixicon": "^4.9.1"
 	},
 	"allowScripts": {
