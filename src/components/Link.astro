@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 interface Props {
 	icon: string
 	title: string
@@ -11,7 +13,7 @@ const { icon, title, description, url } = Astro.props
 
 <a href={url} class="link">
 	<span class="link-icon">
-		<i class={'ri-' + icon}></i>
+		<Icon name={'ri:' + icon} />
 	</span>
 	<div class="link-content">
 		<h2 class="link-title">{title}</h2>
@@ -77,8 +79,9 @@ const { icon, title, description, url } = Astro.props
 		border-color: var(--gray-600);
 	}
 
-	.link-icon i {
-		font-size: 1.375rem;
+	.link-icon svg {
+		width: 1.375rem;
+		height: 1.375rem;
 		color: var(--white);
 	}
 

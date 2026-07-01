@@ -30,6 +30,12 @@
 			"icon": "qr-code-line",
 			"title": "QR-codes",
 			"description": "Make QR-codes"
+		},
+		{
+			"url": "https://ip.hemligt.org",
+			"icon": "global-line",
+			"title": "IP Lookup",
+			"description": "Check your IP and client info"
 		}
 	]
 }

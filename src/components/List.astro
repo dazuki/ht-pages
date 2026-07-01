@@ -15,7 +15,7 @@ interface Props {
 const { links } = Astro.props
 ---
 
-<div class="list" id="list">
+<div class="list">
 	{
 		links.map((item, index) => (
 			<div class="list-item" style={`animation-delay: ${300 + index * 100}ms`}>
