@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@iconify-json/ri": "^1.2.10",
-		"astro": "^7.0.6",
+		"astro": "^7.0.9",
 		"astro-icon": "^1.1.5"
 	},
 	"overrides": {
